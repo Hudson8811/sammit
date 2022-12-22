@@ -1,5 +1,11 @@
 .rate {
 	margin-top: 130px;
+	@media (max-width: 1199px){
+		margin-top: 100px;
+	}
+	@media (max-width: 575px){
+		margin-top: 70px;
+	}
 	&__header {
 		position: relative;
 		display: flex;
@@ -45,6 +51,12 @@
 	}
 	&__items {
 		margin-top: 80px;
+		@media (max-width: 1199px){
+			margin-top: 64px;
+		}
+		@media (max-width: 575px){
+			margin-top: 40px;
+		}
 	}
 	&__item {
 		margin-top: 16px;

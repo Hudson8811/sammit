@@ -34,8 +34,8 @@
 				margin: 0;
 			}
 		}
-		&.active {
-			.faq__subtitle {
+		.faq__subtitle {
+			&.active {
 				span {
 					transform: rotate(45deg);
 				}

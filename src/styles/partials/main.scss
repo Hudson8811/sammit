@@ -23,6 +23,7 @@
 }
 
 h2 {
+	pointer-events: none;
 	position: relative;
 	font-family: 'Raleway';
 	font-style: normal;
@@ -73,11 +74,13 @@ h3 {
 	line-height: 140%;
 	text-transform: uppercase;
 	color: #222222;
+	pointer-events: none;
 	@media (max-width: 575px){
 		font-size: 22px;
 	}
 }
 p, li, .fancybox__caption {
+	pointer-events: none;
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
@@ -217,6 +220,8 @@ p, li, .fancybox__caption {
 		}
 		&-agree {
 			cursor: pointer;
+			min-width: 16px;
+			min-height: 16px;
 			width: 16px;
 			height: 16px;
 			display: block;
@@ -288,9 +293,7 @@ p, li, .fancybox__caption {
 		@media (max-width: 575px){
 			margin-top: 16px;
 		}
-	}
-	&.active {
-		.spoiler__content {
+		&.active {
 			display: block;
 		}
 	}

@@ -1,11 +1,15 @@
 .chart {
-	padding-bottom: 20px;
 	margin: 130px 0px 0px 0px;
+	padding-top: 130px;
+	padding-bottom: 130px;
+	background-color: #E8F3EF;
 	@media (max-width: 1199px){
 		margin: 100px 0px 0px 0px;
+		padding: 100px 0 100px 0;
 	}
 	@media (max-width: 575px){
 		margin: 70px 0px 0px 0px;
+		padding: 70px 0 70px 0;
 	}
 	&__btns {
 		display: flex;
@@ -21,6 +25,7 @@
 		width: 320px;
 		border-top: 1px solid #5E5E5E;
 		transition: all 0.7s ease 0s;
+		position: relative;
 		@media (max-width: 1199px){
 			width: 404px;
 		}
@@ -39,6 +44,9 @@
 		margin-top: 64px;
 		padding-top: 63.38%;
 		position: relative;
+		@media (max-width: 575px){
+			margin-top: 32px;
+		}
 	}
 	&__img {
 		position: absolute;

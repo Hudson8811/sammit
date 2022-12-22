@@ -233,11 +233,15 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
 
 
 /* faq */
-$('.spoiler').click(function(){
+/* $('.spoiler').click(function(){
 	$(this).children('.spoiler__content').slideToggle();
 	$(this).toggleClass('active');
-});
-
+}); */
+$(document).ready(function() {
+	$('.spoiler__title').click(function(event) {
+		$(this).toggleClass('active').next().slideToggle(300);
+	});
+}); 
 /* news */
 var swiper = new Swiper(".news__swiper", {
 	scrollbar: {
