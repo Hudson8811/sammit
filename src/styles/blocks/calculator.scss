@@ -7,8 +7,6 @@
 		margin-top: 70px;
 	}
 
-
-
 	&__body  {
 		display: flex;
 		margin: 64px -16px 0;
@@ -303,7 +301,7 @@
 	}
 
 }
-.schedule {
+#calculator-scrollto {
 	margin-top: 132px;
 	@media (max-width: 1199px){
 		margin-top: 102px;
@@ -311,6 +309,8 @@
 	@media (max-width: 575px){
 		margin-top: 72px;
 	}
+}
+.schedule {
 	table {
 		margin-top: 40px;
 		width: 544px;

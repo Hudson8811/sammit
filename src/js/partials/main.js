@@ -1,5 +1,22 @@
 $(document).ready(function() {
+	/* появление элементов при прокрутке */
+	function onEntry(entry) {
+		entry.forEach(change => {
+			if (change.isIntersecting) {
+				change.target.classList.add('show-active');
+			}
+		});
+	}
+	let options = {
+		threshold: [0.5] };
+	let observer = new IntersectionObserver(onEntry, options);
+	let elements = document.querySelectorAll('.show');
+	for (let elm of elements) {
+		observer.observe(elm);
+	}
 
+
+	
 	$('.click').on('click', function() {
 
 		let href = $(this).attr('href');
@@ -73,6 +90,47 @@ $(document).ready(function() {
 	});
 	$('.popup-application .popup__bg').click(function(){
 		$('.popup-application').removeClass('active');
+	});
+
+
+	/* rate-popup */
+	$('.btn-rate1').click(function(){
+		$('.popup-rate1').addClass('active');
+	});
+	$('.popup-rate1 .popup__agreement-agree').click(function(){
+		$(this).toggleClass('active');
+	});
+	$('.popup-rate1 .popup__close').click(function(){
+		$('.popup-rate1').removeClass('active');
+	});
+	$('.popup-rate1 .popup__bg').click(function(){
+		$('.popup-rate1').removeClass('active');
+	});
+	
+	$('.btn-rate2').click(function(){
+		$('.popup-rate2').addClass('active');
+	});
+	$('.popup-rate2 .popup__agreement-agree').click(function(){
+		$(this).toggleClass('active');
+	});
+	$('.popup-rate2 .popup__close').click(function(){
+		$('.popup-rate2').removeClass('active');
+	});
+	$('.popup-rate2 .popup__bg').click(function(){
+		$('.popup-rate2').removeClass('active');
+	});
+
+	$('.btn-rate3').click(function(){
+		$('.popup-rate3').addClass('active');
+	});
+	$('.popup-rate3 .popup__agreement-agree').click(function(){
+		$(this).toggleClass('active');
+	});
+	$('.popup-rate3 .popup__close').click(function(){
+		$('.popup-rate3').removeClass('active');
+	});
+	$('.popup-rate3 .popup__bg').click(function(){
+		$('.popup-rate3').removeClass('active');
 	});
 
 

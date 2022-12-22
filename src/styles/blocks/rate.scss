@@ -1,13 +1,19 @@
 .rate {
 	margin-top: 130px;
 	&__header {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
+		padding-top: 40px;
 		@media (max-width: 575px){
 			flex-direction: column;
+			padding-top: 24px;
 		}
 		p {
+			transform: translate(0, 25px);
+			opacity: 0;
 			flex: 0 1 544px;
+			transition: all 1.8s ease 0.8s;
 			@media (max-width: 991px){
 				flex: 0 1 336px;
 			}
@@ -15,6 +21,26 @@
 				flex: 1 1 auto;
 				margin-top: 24px;
 			}
+			&.show-active {
+				transform: translate(0, 0);
+				opacity: 1;
+			}
+		}
+		.line {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0%;
+			height: 1px;
+			background-color: #60B3A3;
+			display: block;
+			transition: all 2.3s ease 0.4s;
+			&.show-active {
+				width: 100%;
+			}
+		}
+		&.show-active{
+
 		}
 	}
 	&__items {
@@ -25,6 +51,8 @@
 		padding: 40px;
 		display: flex;
 		justify-content: space-between;
+		opacity: 0;
+		transition: opacity 0.6s, box-shadow 0.3s;
 		@media (max-width: 991px){
 			padding: 40px 24px;
 		}
@@ -42,6 +70,12 @@
 		}
 		&:first-child{
 			margin: 0;
+		}
+		&.show-active {
+			opacity: 1;
+		}
+		&:hover{
+			box-shadow: 0px 4px 8px rgba(2, 201, 141, 0.15)
 		}
 	}
 	&__column1 {

@@ -10,6 +10,13 @@
 		>p {
 			margin-top: 32px;
 			max-width: 448px;
+			transition: all 1.8s ease 0.8s;
+			opacity: 0;
+			transform: translate(0, 25px);
+			&.show-active {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
 		}
 	}
 	&__body {
@@ -24,14 +31,18 @@
 		@media (max-width: 991px){
 			margin-top: 40px;
 		}
-		&::before{
+		.line-green{
 			content:'';
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 160px;
+			width: 0px;
 			height: 3px;
 			background-color: #60B3A3;
+			transition: all 1s ease 0.2s;
+			&.show-active {
+				width: 160px;
+			}
 		}
 	}
 	&__left {

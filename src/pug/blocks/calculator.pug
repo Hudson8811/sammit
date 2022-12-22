@@ -7,16 +7,17 @@ section.calculator
 			span Наш менеджер свяжется с вами для консультации
 			form.popup__form(action="") 
 				.popup__input 
-					input(type="text" placeholder="Ваше имя")
+					input(type="text" placeholder="Ваше имя" required)
 				.popup__input 
-					input(type="tel" placeholder="Введите ваш номер телефона")
+					input(type="tel" placeholder="Введите ваш номер телефона" required)
 				.popup__agreement 
 					span.popup__agreement-agree.agreement-agree
 					p Согласен 
-						a(href="") с политикой конфиденциальности
+						a(href="" target="_blank") с политикой конфиденциальности
 				button.popup__btn.btn-orange Отправить
 	.container 
-		h2.calculator__title.general-title Калькулятор расчета инвестиций
+		h2.calculator__title.show 
+			span.title-text Калькулятор расчета инвестиций
 		.calculator__body 
 			.calculator__left 
 				.calculator__subtitle Выберите для кого
@@ -159,7 +160,7 @@ section.calculator
 						span 18%
 						span Дата первой  выплаты
 						span 11 ноября 2022
-					.card-calculator__btn-schedule График начислений
+					a.card-calculator__btn-schedule.click(href="#calculator-scrollto") График начислений
 					.btn-application.card-calculator__btn.btn-orange Инвестировать
 					.card-calculator__btn.btn-white Инвестиции от 100 тыс. руб.
 				#get2.card.card-calculator 
@@ -171,7 +172,7 @@ section.calculator
 						span 18%
 						span Дата первой  выплаты
 						span 11 ноября 2022
-					.card-calculator__btn-schedule График начислений
+					a.card-calculator__btn-schedule.click(href="#calculator-scrollto") График начислений
 					.btn-application.card-calculator__btn.btn-orange Инвестировать
 					.card-calculator__btn.btn-white Инвестиции от 100 тыс. руб.
 				#get3.card.card-calculator 
@@ -184,7 +185,7 @@ section.calculator
 						span 18%
 						span Дата первой  выплаты
 						span 11 ноября 2022
-					.card-calculator__btn-schedule График начислений
+					a.card-calculator__btn-schedule.click(href="#calculator-scrollto") График начислений
 					.btn-application.card-calculator__btn.btn-orange Инвестировать
 					.card-calculator__btn.btn-white Инвестиции от 100 тыс. руб.
 				#get4.card.card-calculator 
@@ -196,12 +197,12 @@ section.calculator
 						span 18%
 						span Дата первой  выплаты
 						span 11 ноября 2022
-					.card-calculator__btn-schedule График начислений
+					a.card-calculator__btn-schedule.click(href="#calculator-scrollto") График начислений
 					.btn-application.card-calculator__btn.btn-orange Инвестировать
 					.card-calculator__btn.btn-white Инвестиции от 100 тыс. руб.
-
+		#calculator-scrollto
 		.calculator-hidden-info
-			.schedule
+			#schedule.schedule
 				h3.schedule__title График начислений
 				table
 					tbody

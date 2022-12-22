@@ -9,6 +9,8 @@
 	&__body {
 		display: flex;
 		margin: 0 -16px;
+		opacity: 0;
+		transition: all 0.7s ease 0.3s;
 		@media (max-width: 991px){
 			flex-wrap: wrap;
 			margin: 0;
@@ -20,6 +22,9 @@
 				flex: 1 1 100%;
 				padding: 0;
 			}
+		}
+		&.show-active {
+			opacity: 1;
 		}
 	}
 	&__left {
