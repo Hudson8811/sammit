@@ -60,6 +60,23 @@ $(document).ready(function() {
 		calculator__dropdown2.toggle();
 	});
 
+
+
+	const calculator__input_range1 = document.querySelector("#calculator__input-range1 input");
+	const calculator__input_1 = document.querySelector("#calculator__input1");
+
+	calculator__input_range1.addEventListener("input", () => {
+		calculator__input_1.value = calculator__input_range1.value + ' ₽';
+	})
+
+	const calculator__input_range2 = document.querySelector("#calculator__input-range2 input");
+	const calculator__input_2 = document.querySelector("#calculator__input2");
+
+	calculator__input_range2.addEventListener("input", () => {
+		calculator__input_2.value = calculator__input_range2.value + '';
+	})
+
+
 	$(function() {
 		$('.calculator__btn').click(function() {
 			card_calculator_id = $(this).attr('href');
