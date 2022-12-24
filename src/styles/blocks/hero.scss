@@ -42,7 +42,6 @@
 		padding-bottom: 24px;
 		position: relative;
 		span {
-			transition: all 1.8s ease 0.4s;
 			display: block;
 			font-family: 'Raleway';
 			font-style: normal;
@@ -80,7 +79,6 @@
 		line-height: 145%;
 		color: #FCFCFC;
 		transform: translate(0, 25px);
-		transition: all 1.8s ease 0.8s;
 		opacity: 0;
 		@media (max-width: 575px){
 			font-size: 18px;
@@ -92,15 +90,17 @@
 			span {
 				opacity: 1;
 				transform: translate(0, 0);
+				transition: opacity 1.8s ease 0.4s, transform 1.8s ease 0.4s;
 			}
 			&::before{
-				transition: all 2.3s ease 0.4s;
+				transition: width 2.3s ease 0.4s;
 				width: 100%;
 			}
 		}
 		p {
 			transform: translate(0, 0);
 			opacity: 1;
+			transition: opacity 1.8s ease 0.8s, transform 1.8s ease 0.8s;
 		}
 	}
 }
