@@ -1,5 +1,9 @@
-.last {
-	background: url('../images/last/1.jpg') center / cover no-repeat;
+.have-more-questions {
+	background-image: url('../images/last/1.jpg');
+	background-position: center center !important;
+	background-repeat:  no-repeat !important;
+	background-size:  cover !important ;
+
 	margin-top: 130px;
 	padding-top: 570px;
 	padding-bottom: 120px;

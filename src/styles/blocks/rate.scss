@@ -19,7 +19,7 @@
 			transform: translate(0, 25px);
 			opacity: 0;
 			flex: 0 1 544px;
-			transition: all 1.8s ease 0.8s;
+			transition: opacity 1.8s ease 0.8s, transform 1.8s ease 0.8s;
 			@media (max-width: 991px){
 				flex: 0 1 336px;
 			}

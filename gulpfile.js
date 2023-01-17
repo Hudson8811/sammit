@@ -124,7 +124,7 @@ function cleanimg() {
 }
 
 function cleandist() {
-	return del('public/**/*', { force: true })
+	//return del('public/**/*', { force: true })
 }
 
 
